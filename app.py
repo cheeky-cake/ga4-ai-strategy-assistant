@@ -3,6 +3,9 @@ import google.generativeai as genai
 import pandas as pd
 import numpy as np
 
+# Streamlitの隠し金庫からAPIキーを安全に読み込む設定
+genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
+
 # ページ全体のレイアウト設定
 st.set_page_config(page_title="GA4高度サイト分析＆AIアシスタント", layout="wide")
 
